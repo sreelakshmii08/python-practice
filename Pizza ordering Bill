@@ -1,0 +1,29 @@
+print("Hi!, Welcome to leo pizza. what's your order?")
+size_of_pizza = input("what size of pizza do you want? S M or L?")
+pepperoni = input("Do you want to add pepperoni as your toppings?Y or N?")
+extra_cheese = input("want to add extra cheese?Y or N?")
+bill = 0
+if size_of_pizza == "S":
+    bill = 15
+    print("small pizza")
+elif size_of_pizza == "M":
+    bill = 20
+    print("Medium pizza")
+elif size_of_pizza == "L":
+    bill = 25
+    print("Large pizza")
+else:
+    print("you typed wrong letter")
+if pepperoni == "Y":
+    if size_of_pizza == "S":
+        bill += 2
+    else:
+        bill += 3
+else:
+    print("no pepperoni added")
+if extra_cheese == "y":
+    bill += 1
+    print("extra cheese added")
+print(f"total price of the pizza is : {bill}")
+
+
